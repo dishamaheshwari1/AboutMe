@@ -9,13 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            Color(.blue1)
-                .ignoresSafeArea()
             ScrollView {
                 VStack(spacing: 0) {
                     ZStack {
                         Color(.blue1)
+                            .ignoresSafeArea(edges: [.top, .horizontal])
                         VStack(alignment: .leading, spacing: 16) {
                             Image("prom")
                                 .resizable()
@@ -82,7 +80,6 @@ struct ContentView: View {
             }
         }
     }
-}
 
 #Preview {
     ContentView()
